@@ -1,0 +1,2 @@
+settings with - dark mode + exchange history(exchange again with comparision with the previous exchange).
+base list from to + amount

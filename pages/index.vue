@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <h1 class="bg-red-200">test</h1>
-    <div class="box w-20 h-20 bg-red-300"></div>
-    <div class="box-2 w-[130px] h-[130px] bg-green-300">
-      {{ indexStore.isMenuOverlay }}
-    </div>
+  <div class="bg-gray-100 flex justify-center items-center min-h-[100vh]">
+    <main
+      class="w-11/12 sm:w-3/4 md:w-1/2 bg-gray-200 p-4 rounded-md shadow-lg"
+    >
+      <BaseHeading />
+    </main>
   </div>
 </template>
 
