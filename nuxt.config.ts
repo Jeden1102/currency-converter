@@ -6,9 +6,12 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@nuxtjs/color-mode',
   ],
-
+  colorMode: {
+    classSuffix: ''
+  },
   runtimeConfig: {
     public: {
       stripePk: process.env.STRIPE_PK_KEY
