@@ -29,6 +29,13 @@ interface optionInterface {
 const options: Array<optionInterface> = [
   { key: "PL", value: "Poland" },
   { key: "GER", value: "Germany" },
+  { key: "GER2", value: "Germany2" },
+  { key: "GER3", value: "Germany3" },
+  { key: "GER4", value: "Germany4" },
+  { key: "GER5", value: "Germany5" },
+  { key: "GER6", value: "Germany6" },
+  { key: "GER7", value: "Germany7" },
+  { key: "GER8", value: "Germany8" },
 ];
 </script>
 
