@@ -1,6 +1,6 @@
 <template>
   <div
-    class="custom-select relative w-fit bg-gray-100 p-2 rounded-sm shadow-sm border b-black"
+    class="custom-select relative w-fit bg-gray-100 p-2 rounded-sm shadow-sm border b-black dark:bg-gray-200"
   >
     <button
       class="custom-select__dropdown relative z-20"
@@ -8,7 +8,7 @@
     >
       {{ selectedOption.value ? selectedOption.value : placeholder }}
       <Icon
-        class="dark:text-gray-100 text-gray-600 ml-2 pointer-events-none"
+        class="text-gray-600 ml-2 pointer-events-none"
         :class="{ active: dropdownVisible }"
         name="heroicons:chevron-down-solid"
       />
@@ -20,7 +20,7 @@
       >
         <div class="custom-select__search-box relative">
           <Icon
-            class="dark:text-gray-100 text-gray-600 absolute top-1/2 left-2 translate-y-[-50%]"
+            class="ext-gray-600 absolute top-1/2 left-2 translate-y-[-50%]"
             name="heroicons-solid:search"
           />
           <input
@@ -52,7 +52,6 @@
 interface option {
   key?: string;
   value?: string;
-  image?: string;
 }
 const props = defineProps({
   options: { type: Array<option>, required: true },

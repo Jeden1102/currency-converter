@@ -13,8 +13,9 @@ export default defineNuxtConfig({
     classSuffix: ''
   },
   runtimeConfig: {
-    public: {
-      stripePk: process.env.STRIPE_PK_KEY
+      public: {
+        API_URL: process.env.NUXT_API_URL,
+        API_KEY: process.env.NUXT_API_KEY,
     }
   },
   app: {

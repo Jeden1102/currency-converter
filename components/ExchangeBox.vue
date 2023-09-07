@@ -2,7 +2,7 @@
   <div class="w-full bg-gray-50 rounded-sm p-3 dark:bg-gray-300 flex flex-col">
     <div class="box-to-convert font-light pb-4">
       <p class="text-sm">Amount</p>
-      <CustomSelect :options="options" placeholder="Pick a value..." />
+      <CustomSelect :options="data.data" placeholder="Pick a value..." />
     </div>
     <div class="exchange-box flex items-center relative">
       <button
@@ -21,6 +21,8 @@
 </template>
 
 <script setup lang="ts">
+const { data } = await useFetch("/api/countries");
+
 interface optionInterface {
   key: string;
   value: string;
