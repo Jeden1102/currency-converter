@@ -18,11 +18,4 @@ export default defineNuxtConfig({
         API_KEY: process.env.NUXT_API_KEY,
     }
   },
-  app: {
-    head: {
-      script: [
-        { src: 'https://js.stripe.com/v3/', defer: true }
-      ],
-    }
-  }
 })

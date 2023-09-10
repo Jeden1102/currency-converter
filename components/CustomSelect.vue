@@ -1,8 +1,8 @@
 <template>
   <div
-    class="custom-select relative w-fit bg-gray-100 p-2 h-12 rounded-sm shadow-sm border b-black dark:bg-gray-200 flex-1 w-1/2">
+    class="custom-select relative w-fit bg-gray-100 p-2 h-12 rounded-sm shadow-sm border b-black dark:bg-gray-200 flex text flex-1 w-1/2">
     <button
-      class="custom-select__dropdown relative whitespace-nowrap  overflow-hidden text-ellipsis pr-6 w-full"
+      class="custom-select__dropdown relative whitespace-nowrap  overflow-hidden text-ellipsis pr-6 w-full text-left"
       @click="dropdownVisible = !dropdownVisible">
       {{ selectedOption.value ? selectedOption.value : placeholder }}
       <Icon
@@ -55,6 +55,12 @@ function selectOption(option: option) {
   selectedOption.value = option;
   emit('optionSelected', { option, id: props.id });
 }
+function exposeValue(option) {
+  selectedOption.value = option.option;
+}
+defineExpose({
+  exposeValue
+});
 const filteredOptions = computed(() => {
   if (!filteredValue.value) return props.options;
   return props.options.filter(
